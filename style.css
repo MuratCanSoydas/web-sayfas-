@@ -1,0 +1,78 @@
+/* GENEL YAPI */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* NAVBAR HATASI DÜZELTMESİ: Derinlik eksikliği */
+.navbar {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #0d6efd;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* API VE CV KARTLARI İÇİN ETKİLEŞİM EKSİKLİĞİ DÜZELTMESİ */
+/* Statik duran kartlara kullanıcı geri bildirimi (hover) eklendi */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2) !important;
+    border-color: #0d6efd !important;
+}
+
+/* İLETİŞİM FORMU ODAK (FOCUS) HATASI DÜZELTMESİ */
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* API SAYFASI ÖZEL DÜZELTMELER */
+/* Başlıkların sayfada yavan durmasını engeller */
+h2.border-bottom {
+    display: inline-block;
+    padding-bottom: 10px;
+}
+/* YUMUŞAK GEÇİŞLER VE ANİMASYONLAR */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sayfa ilk yüklendiğinde içeriklerin aşağıdan yukarı belirmesi */
+body {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(15px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* API Arama çubuğu odaklanma (focus) hatası giderimi */
+.search-box:focus {
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+    border-color: #ffc107;
+}
+
+/* Buton hizalaması için kart içi flex yapısı */
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+.card-body .btn {
+    margin-top: auto;
+}
