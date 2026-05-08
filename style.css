@@ -97,3 +97,43 @@ footer {
     padding: 40px 0;
     color: var(--text-muted);
 }
+/* ==========================================
+   SLIDER BİLGİ KUTULARI (PREMIUM CAPTION)
+   ========================================== */
+
+/* Resimlerin üzerindeki yazının okunması için resimleri hafif karartır */
+.carousel-item img {
+    transition: filter 0.5s ease;
+}
+
+/* Bilgi Kutusu Ana Stili (Glassmorphism) */
+.premium-caption {
+    background: rgba(15, 23, 42, 0.7) !important; /* Slate 900 rengi %70 şeffaf */
+    backdrop-filter: blur(7px); /* Buzlu cam efekti */
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Çok ince beyaz kenarlık */
+    border-radius: 15px; /* Yumuşak köşeler */
+    padding: 20px 30px;
+    max-width: 70%; /* Kutunun çok genişlemesini engeller */
+    margin: 0 auto; /* Ortalar */
+    bottom: 50px; /* Kutuyu biraz yukarı taşır */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Derinlik hissi */
+}
+
+/* Kutunun başlığı (Amber Rengi) */
+.premium-caption h5 {
+    color: #fbbf24 !important; /* Amber sarısı */
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Kutunun metni */
+.premium-caption p {
+    color: #f8fafc !important; /* Slate beyazı */
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
