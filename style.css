@@ -98,42 +98,60 @@ footer {
     color: var(--text-muted);
 }
 /* ==========================================
-   SLIDER BİLGİ KUTULARI (PREMIUM CAPTION)
+   SLIDER BİLGİ KUTULARI (HOVER EFEKTLİ)
    ========================================== */
 
-/* Resimlerin üzerindeki yazının okunması için resimleri hafif karartır */
+/* Resmin genel geçiş ayarları */
 .carousel-item img {
-    transition: filter 0.5s ease;
+    transition: filter 0.5s ease, transform 0.5s ease;
 }
 
-/* Bilgi Kutusu Ana Stili (Glassmorphism) */
+/* 1. EFEKT: Mause resmin üzerine geldiğinde resim hafif kararır ve yakınlaşır */
+.carousel-item:hover img {
+    filter: brightness(45%) !important; /* Yazının okunması için resmi karartır */
+    transform: scale(1.02); /* Hafif zoom efekti */
+}
+
+/* Bilgi Kutusu Ana Stili */
 .premium-caption {
-    background: rgba(15, 23, 42, 0.7) !important; /* Slate 900 rengi %70 şeffaf */
-    backdrop-filter: blur(7px); /* Buzlu cam efekti */
-    -webkit-backdrop-filter: blur(7px);
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Çok ince beyaz kenarlık */
-    border-radius: 15px; /* Yumuşak köşeler */
+    background: rgba(15, 23, 42, 0.8) !important; /* %80 Opaklıkta Yarı Saydam Koyu Arkaplan */
+    backdrop-filter: blur(8px); /* Arkadaki resme buzlu cam efekti verir */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
     padding: 20px 30px;
-    max-width: 70%; /* Kutunun çok genişlemesini engeller */
-    margin: 0 auto; /* Ortalar */
-    bottom: 50px; /* Kutuyu biraz yukarı taşır */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Derinlik hissi */
+    max-width: 70%;
+    margin: 0 auto;
+    bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+
+    /* 2. EFEKT: BAŞLANGIÇTA KUTUYU GİZLEME VE ANİMASYON AYARI */
+    opacity: 0; /* Tamamen görünmez yap */
+    visibility: hidden;
+    transform: translateY(30px); /* Animasyon için kutuyu 30 piksel aşağıda tut */
+    transition: all 0.4s ease-in-out; /* Yumuşak bir şekilde ekrana gelmesini sağlar */
 }
 
-/* Kutunun başlığı (Amber Rengi) */
+/* 3. EFEKT: MAUSE ÜZERİNE GELDİĞİNDE KUTUYU GÖSTER (HOVER) */
+.carousel-item:hover .premium-caption {
+    opacity: 1; /* Görünür yap */
+    visibility: visible;
+    transform: translateY(0); /* Aşağıdan yukarı doğru orijinal konumuna kaydır */
+}
+
+/* Başlık ve Metin Renkleri */
 .premium-caption h5 {
-    color: #fbbf24 !important; /* Amber sarısı */
+    color: #fbbf24 !important; /* Amber Sarısı */
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Kutunun metni */
 .premium-caption p {
-    color: #f8fafc !important; /* Slate beyazı */
-    font-size: 1rem;
+    color: #f8fafc !important; /* Beyaz */
+    font-size: 1.1rem;
     line-height: 1.5;
     margin-bottom: 0;
 }
