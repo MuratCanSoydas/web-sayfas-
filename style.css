@@ -166,3 +166,10 @@ footer {
     color: #fff !important; /* Üzerine gelince beyaz olur */
     text-shadow: 0 0 10px rgba(251, 191, 36, 0.8); /* Amber rengi parlama efekti */
 }
+/* API'den gelen gömülü HTML etiketlerinin renklerini zorla beyaz yap */
+#api-results .card-body,
+#api-results .card-body p,
+#api-results .card-body b,
+#api-results .card-body i {
+    color: #ffffff !important;
+}
