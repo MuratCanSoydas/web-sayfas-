@@ -1,8 +1,8 @@
 <?php
 // Kendi Sakarya Üniversitesi öğrenci bilgilerini buraya girmelisin
 // Tırnak işaretlerini (") silmeden içindeki metni değiştir!
-$dogru_mail = "b000000000@ogr.sakarya.edu.tr"; // Kendi SAÜ öğrenci mailini buraya yaz
-$dogru_sifre = "b000000000"; // Kendi öğrenci numaranı buraya yaz
+$dogru_mail = "b251210095@ogr.sakarya.edu.tr";
+$dogru_sifre = "b251210095";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gelen_mail = $_POST['user_email'];

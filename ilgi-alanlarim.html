@@ -22,12 +22,12 @@
             transform: translateY(-2px);
         }
         .nav-pills .nav-link.active {
-            background-color: #fbbf24;
-            color: #020617;
+            background-color: #fbbf24 !important;
+            color: #020617 !important; /* Yazı rengini zorla koyu lacivert/siyah yapar */
             font-weight: 600;
-            border-color: #fbbf24;
+            border-color: #fbbf24 !important;
             box-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
-        }
+        }        }
         .item-card img {
             height: 250px;
             object-fit: cover;
@@ -89,7 +89,6 @@
     </footer>
 
     <script>
-        // Filmler dizisi tamamen silindi
         const favoriler = {
             dizi: ['Fringe', 'Sherlock Holmes', 'Hekimoğlu', 'Shameless', 'The Wire', 'Breaking Bad', 'Game of Thrones', 'The Crown', 'Stranger Things', 'The Mandalorian'],
             oyun: [
