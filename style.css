@@ -173,3 +173,76 @@ footer {
 #api-results .card-body i {
     color: #ffffff !important;
 }
+/* ==========================================
+   CV DÖRTLÜ MATRİS (PREMIUM TILES)
+   ========================================== */
+
+.header-line {
+    width: 80px;
+    height: 4px;
+    background: #fbbf24;
+    margin: 20px auto 40px;
+}
+
+.cv-tile {
+    background: rgba(30, 41, 59, 0.4) !important; /* Yarı saydam slate */
+    border: 1px solid rgba(251, 191, 36, 0.2); /* Çok ince amber kenarlık */
+    border-radius: 20px;
+    padding: 35px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+}
+
+/* Hover Efekti: Kartın parlaması ve yükselmesi */
+.cv-tile:hover {
+    transform: translateY(-10px);
+    border-color: #fbbf24;
+    background: rgba(30, 41, 59, 0.7) !important;
+    box-shadow: 0 15px 35px rgba(251, 191, 36, 0.15);
+}
+
+.tile-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.tile-header i {
+    font-size: 32px;
+    color: #fbbf24;
+}
+
+.tile-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fbbf24;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.cv-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-list li {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    color: #f8fafc;
+    position: relative;
+    padding-left: 10px;
+}
+
+.cv-list li strong {
+    color: #ffffff;
+    display: block;
+}
+
+.cv-list li span {
+    color: #94a3b8; /* Alt metinler için daha sönük gri */
+    font-size: 0.95rem;
+}
