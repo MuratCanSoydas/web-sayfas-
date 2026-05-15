@@ -1,7 +1,7 @@
 /* MODERN DARK UI DESIGN SYSTEM - MURAT CAN SOYDAŞ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lato:wght@300;400;700&display=swap');
 
-:root {
+:root { 
     --bg-dark: #020617;        /* Slate 950 - Ana Arkaplan */
     --bg-card: #0f172a;        /* Slate 900 - Kart Arkaplanı */
     --accent: #fbbf24;         /* Amber 400 - Vurgu Rengi */

@@ -31,24 +31,24 @@
     <main class="container mt-5">
         <h1 class="text-center mb-4">Doğanın Ruh Kazandığı Şehir: Gümüşhane</h1>
 
-        <div id="gumushaneSlider" class="carousel slide shadow-lg mb-5" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="4"></button>
-                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="5"></button>
-                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="6"></button>
+        <div id="gumushaneSlider" class="carousel slide shadow-lg mb-5" data-bs-ride="carousel"> <!-- Bootstrap Carousel bileşenini başlatır. "id" özniteliği, bu carousel'in benzersiz tanımlayıcısıdır ve diğer bileşenler tarafından referans alınmasını sağlar. "class" özniteliği, carousel'in görünümünü ve davranışını belirler. "data-bs-ride" özniteliği, carousel'in otomatik olarak kaymaya başlamasını sağlar. -->
+            <div class="carousel-indicators"> 
+                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="0" class="active"></button> <!-- İlk slayt için gösterge düğmesi. "data-bs-target" özniteliği, bu düğmenin hangi carousel'i kontrol ettiğini belirtir. "data-bs-slide-to" özniteliği, bu düğmenin hangi slayta geçiş yapacağını belirtir. "class='active'" sınıfı, bu düğmenin aktif olduğunu gösterir, yani sayfa yüklendiğinde ilk slayt gösterilir. -->
+                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="1"></button> <!-- İkinci slayt için gösterge düğmesi. "data-bs-target" özniteliği, bu düğmenin hangi carousel'i kontrol ettiğini belirtir. "data-bs-slide-to" özniteliği, bu düğmenin hangi slayta geçiş yapacağını belirtir. -->
+                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="2"></button> <!-- Üçüncü slayt için gösterge düğmesi. "data-bs-target" özniteliği, bu düğmenin hangi carousel'i kontrol ettiğini belirtir. "data-bs-slide-to" özniteliği, bu düğmenin hangi slayta geçiş yapacağını belirtir. -->
+                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="3"></button> <!-- Dördüncü slayt için gösterge düğmesi. "data-bs-target" özniteliği, bu düğmenin hangi carousel'i kontrol ettiğini belirtir. "data-bs-slide-to" özniteliği, bu düğmenin hangi slayta geçiş yapacağını belirtir. -->
+                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="4"></button> <!-- Beşinci slayt için gösterge düğmesi. "data-bs-target" özniteliği, bu düğmenin hangi carousel'i kontrol ettiğini belirtir. "data-bs-slide-to" özniteliği, bu düğmenin hangi slayta geçiş yapacağını belirtir. -->
+                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="5"></button> <!-- Altıncı slayt için gösterge düğmesi. "data-bs-target" özniteliği, bu düğmenin hangi carousel'i kontrol ettiğini belirtir. "data-bs-slide-to" özniteliği, bu düğmenin hangi slayta geçiş yapacağını belirtir. -->
+                <button type="button" data-bs-target="#gumushaneSlider" data-bs-slide-to="6"></button> <!-- Yedinci slayt için gösterge düğmesi. "data-bs-target" özniteliği, bu düğmenin hangi carousel'i kontrol ettiğini belirtir. "data-bs-slide-to" özniteliği, bu düğmenin hangi slayta geçiş yapacağını belirtir. -->
             </div>
 
-            <div class="carousel-inner rounded">
-                <div class="carousel-item active">
-                    <img src="resimler/slider1.jpg" class="d-block w-100" alt="Gümüşhane Genel Görünüm" style="height: 550px; object-fit: cover; filter: brightness(70%);">
-                    <div class="carousel-caption d-none d-md-block premium-caption">
-                        <h5><a href="https://www.google.com/search?q=g%C3%BCm%C3%BC%C5%9Fhane&oq=g%C3%BCm%C3%BC%C5%9Fhane&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyBwgBEC4YgAQyBwgCEC4YgAQyBggDEEUYOzIGCAQQRRg7MgYIBRBFGD0yBggGEEUYPTIGCAcQRRg90gEIMTgxOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">Gümüşhane Genel Görünüm</a></h5>
-                        <p>Kendine has parıltısı ile göze çarpan şehir merkezi, küçük ve samimi bir yaşam alanı sunmakta. Çevrelendiği dağlık ve ormanlık arazi insanı rahatlatmaktadır. Kışın karlar ile büründüğünde kartpostallık görüntüler ortaya çıkartmaktadır.</p>
-                    </div>
+            <div class="carousel-inner rounded"> <!-- Carousel içeriğini tutan kapsayıcı. "carousel-inner" sınıfı, Bootstrap tarafından carousel içeriği olarak tanımlanır. "rounded" sınıfı, carousel'in köşelerini yuvarlar. -->
+                <div class="carousel-item active"> <!-- İlk slayt. "carousel-item" sınıfı, bu div'in bir carousel öğesi olduğunu belirtir. "active" sınıfı, bu slaytın başlangıçta gösterileceğini belirtir. -->
+                    <img src="resimler/slider1.jpg" class="d-block w-100" alt="Gümüşhane Genel Görünüm" style="height: 550px; object-fit: cover; filter: brightness(70%);"> <!-- Slayt resmi. "src" özniteliği, resmin dosya yolunu belirtir. "class" özniteliği, resmin görünümünü ve davranışını belirler. "d-block" sınıfı, resmi blok düzeneği yapar. "w-100" sınıfı, resmin genişliğini %100 yapar. "alt" özniteliği, resim yüklenemezse gösterilecek alternatif metni belirtir. "style" özniteliği, resmin yüksekliğini 550 piksel yapar, içeriğin kırpılmasını önlemek için "object-fit: cover" kullanır ve resme %70 parlaklık uygular. --> 
+                    <div class="carousel-caption d-none d-md-block premium-caption">     <!-- Slayt başlığı ve açıklamasını içeren kapsayıcı. "carousel-caption" sınıfı, bu div'in bir carousel başlığı olduğunu belirtir. "d-none d-md-block" sınıfları, bu başlığın küçük ekranlarda gizlenip orta ve büyük ekranlarda gösterilmesini sağlar. "premium-caption" sınıfı, özel stil ayarları için kullanılır. -->
+                        <h5><a href="https://www.google.com/search?q=g%C3%BCm%C3%BC%C5%9Fhane&oq=g%C3%BCm%C3%BC%C5%9Fhane&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyBwgBEC4YgAQyBwgCEC4YgAQyBggDEEUYOzIGCAQQRRg7MgYIBRBFGD0yBggGEEUYPTIGCAcQRRg90gEIMTgxOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">Gümüşhane Genel Görünüm</a></h5> <!-- Slayt başlığı. "h5" etiketi, başlık seviyesini belirtir. "a" etiketi, başlığı tıklanabilir bir bağlantıya dönüştürür. "href" özniteliği, bağlantının hedef URL'sini belirtir. "target='_blank'" özniteliği, bağlantının yeni bir sekmede açılmasını sağlar. -->
+                        <p>Kendine has parıltısı ile göze çarpan şehir merkezi, küçük ve samimi bir yaşam alanı sunmakta. Çevrelendiği dağlık ve ormanlık arazi insanı rahatlatmaktadır. Kışın karlar ile büründüğünde kartpostallık görüntüler ortaya çıkartmaktadır.</p> <!-- Slayt açıklaması. "p" etiketi, paragrafı belirtir. Bu metin, slayt hakkında kısa bir açıklama sağlar ve ziyaretçilere şehrin genel atmosferi hakkında bilgi verir. -->
+                    </div> 
                 </div>
                 <div class="carousel-item">
                     <img src="resimler/slider2.jpg" class="d-block w-100" alt="Artabel Gölü" style="height: 500px; object-fit: cover;">
@@ -86,24 +86,24 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#gumushaneSlider" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#gumushaneSlider" data-bs-slide="prev"> <!-- Önceki slayta geçiş düğmesi. "class" özniteliği, bu düğmenin görünümünü ve davranışını belirler. "data-bs-target" özniteliği, bu düğmenin hangi carousel'i kontrol ettiğini belirtir. "data-bs-slide" özniteliği, bu düğmenin hangi yönde geçiş yapacağını belirtir. -->
+                <span class="carousel-control-prev-icon"></span> <!-- Önceki slayt simgesi. "class" özniteliği, bu span'ın önceki slayt simgesi olduğunu belirtir. Bootstrap tarafından sağlanan bir ikon sınıfıdır ve genellikle sol ok şeklinde görünür. -->
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#gumushaneSlider" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#gumushaneSlider" data-bs-slide="next"> <!-- Sonraki slayta geçiş düğmesi. "class" özniteliği, bu düğmenin görünümünü ve davranışını belirler. "data-bs-target" özniteliği, bu düğmenin hangi carousel'i kontrol ettiğini belirtir. "data-bs-slide" özniteliği, bu düğmenin hangi yönde geçiş yapacağını belirtir. -->
+                <span class="carousel-control-next-icon"></span> <!-- Sonraki slayt simgesi. "class" özniteliği, bu span'ın sonraki slayt simgesi olduğunu belirtir. Bootstrap tarafından sağlanan bir ikon sınıfıdır ve genellikle sağ ok şeklinde görünür. -->
             </button>
         </div>
 
-        <div class="row mt-5 mb-5">
-            <section class="col-md-6 mb-4">
-                <div class="card h-100 shadow-lg border-secondary bg-dark text-light premium-card">
-                    <a href="https://www.kulturportali.gov.tr/turkiye/gumushane/gezilecekyer/suleymaniye-eski-gumushane-mahallesi" target="_blank">
-                        <img src="resimler/miras.jpg" class="card-img-top" alt="Gümüşhane Miras" style="height: 300px; object-fit: cover;">
+        <div class="row mt-5 mb-5"> <!-- Bootstrap grid sistemini kullanarak iki sütunlu bir düzen oluşturur. "row" sınıfı, bu div'in bir satır olduğunu belirtir. "mt-5" ve "mb-5" sınıfları, bu satırın üstüne ve altına boşluk ekler. -->
+            <section class="col-md-6 mb-4"> <!-- İlk sütun. "col-md-6" sınıfı, bu div'in orta ve büyük ekranlarda 6 sütun genişliğinde (yani yarım genişlik) olmasını sağlar. "mb-4" sınıfı, bu sütunun altına boşluk ekler. -->
+                <div class="card h-100 shadow-lg border-secondary bg-dark text-light premium-card"> <!-- Bootstrap kart bileşenini başlatır. "card" sınıfı, bu div'in bir kart olduğunu belirtir. "h-100" sınıfı, bu kartın yüksekliğinin %100 olmasını sağlar, böylece aynı satırdaki diğer kartla aynı hizada olur. "shadow-lg" sınıfı, bu karta büyük bir gölge efekti verir. "border-secondary" sınıfı, bu kartın kenarlığını ikincil renk yapar. "bg-dark" sınıfı, bu kartın arka planını koyu yapar. "text-light" sınıfı, bu kartın metnini açık renk yapar. "premium-card" sınıfı, özel stil ayarları için kullanılır. -->
+                    <a href="https://www.kulturportali.gov.tr/turkiye/gumushane/gezilecekyer/suleymaniye-eski-gumushane-mahallesi" target="_blank"> <!-- Kartın tamamını tıklanabilir bir bağlantıya dönüştürür. "href" özniteliği, bağlantının hedef URL'sini belirtir. "target='_blank'" özniteliği, bağlantının yeni bir sekmede açılmasını sağlar. -->
+                        <img src="resimler/miras.jpg" class="card-img-top" alt="Gümüşhane Miras" style="height: 300px; object-fit: cover;"> <!-- Kartın üst kısmında gösterilecek resim. "src" özniteliği, resmin dosya yolunu belirtir. "class" özniteliği, resmin görünümünü ve davranışını belirler. "card-img-top" sınıfı, bu resmin kartın üst kısmında gösterileceğini belirtir. "alt" özniteliği, resim yüklenemezse gösterilecek alternatif metni belirtir. "style" özniteliği, resmin yüksekliğini 300 piksel yapar ve içeriğin kırpılmasını önlemek için "object-fit: cover" kullanır. -->
                     </a>
-                    <div class="card-body">
-                        <h2 class="card-title">
-                            <a href="https://www.kulturportali.gov.tr/turkiye/gumushane/gezilecekyer/suleymaniye-eski-gumushane-mahallesi" target="_blank" class="text-warning text-decoration-none">
-                                Şehrin Dokusu ve Mirası
+                    <div class="card-body"> <!-- Kartın içeriğini tutan kapsayıcı. "card-body" sınıfı, bu div'in bir kart gövdesi olduğunu belirtir. Bu bölümde kartın başlığı ve açıklaması yer alır. -->
+                        <h2 class="card-title"> <!-- Kart başlığı. "card-title" sınıfı, bu h2'nin bir kart başlığı olduğunu belirtir. -->
+                            <a href="https://www.kulturportali.gov.tr/turkiye/gumushane/gezilecekyer/suleymaniye-eski-gumushane-mahallesi" target="_blank" class="text-warning text-decoration-none"> <!-- Başlığı tıklanabilir bir bağlantıya dönüştürür. "href" özniteliği, bağlantının hedef URL'sini belirtir. "target='_blank'" özniteliği, bağlantının yeni bir sekmede açılmasını sağlar. "class" özniteliği, bu bağlantının metnini uyarı renginde yapar ve alt çizgiyi kaldırır. -->
+                                Şehrin Dokusu ve Mirası 
                             </a>
                         </h2>
                         <p class="text-white">Gümüşhane, doğal güzellikleri, gölleri ve yaylaları ile Karadeniz Bölgesi'nin en önemli doğa turizmi merkezlerinden biridir. Süleymaniye Mahallesi gibi tarihi miraslara ev sahipliği yapar.</p>
@@ -111,14 +111,14 @@
                 </div>
             </section>
             
-            <section class="col-md-6 mb-4">
-                <div class="card h-100 shadow-lg border-secondary bg-dark text-light premium-card">
-                    <a href="https://www.transfermarkt.com.tr/gumushanespor/startseite/verein/4574" target="_blank">
-                        <img src="resimler/takim.jpg" class="card-img-top" alt="Gümüşhanespor" style="height: 300px; object-fit: contain; background-color: #000;">
+            <section class="col-md-6 mb-4"> <!-- İkinci sütun. "col-md-6" sınıfı, bu div'in orta ve büyük ekranlarda 6 sütun genişliğinde (yani yarım genişlik) olmasını sağlar. "mb-4" sınıfı, bu sütunun altına boşluk ekler. -->
+                <div class="card h-100 shadow-lg border-secondary bg-dark text-light premium-card"> <!-- Bootstrap kart bileşenini başlatır. "card" sınıfı, bu div'in bir kart olduğunu belirtir. "h-100" sınıfı, bu kartın yüksekliğinin %100 olmasını sağlar, böylece aynı satırdaki diğer kartla aynı hizada olur. "shadow-lg" sınıfı, bu karta büyük bir gölge efekti verir. "border-secondary" sınıfı, bu kartın kenarlığını ikincil renk yapar. "bg-dark" sınıfı, bu kartın arka planını koyu yapar. "text-light" sınıfı, bu kartın metnini açık renk yapar. "premium-card" sınıfı, özel stil ayarları için kullanılır. -->
+                    <a href="https://www.transfermarkt.com.tr/gumushanespor/startseite/verein/4574" target="_blank"> <!-- Kartın tamamını tıklanabilir bir bağlantıya dönüştürür. "href" özniteliği, bağlantının hedef URL'sini belirtir. "target='_blank'" özniteliği, bağlantının yeni bir sekmede açılmasını sağlar. -->
+                        <img src="resimler/takim.jpg" class="card-img-top" alt="Gümüşhanespor" style="height: 300px; object-fit: contain; background-color: #000;"> <!-- Kartın üst kısmında gösterilecek resim. "src" özniteliği, resmin dosya yolunu belirtir. "class" özniteliği, resmin görünümünü ve davranışını belirler. "card-img-top" sınıfı, bu resmin kartın üst kısmında gösterileceğini belirtir. "alt" özniteliği, resim yüklenemezse gösterilecek alternatif metni belirtir. "style" özniteliği, resmin yüksekliğini 300 piksel yapar ve içeriğin kırpılmasını önlemek için "object-fit: contain" kullanır. -->
                     </a>
-                    <div class="card-body">
-                        <h2 class="card-title">
-                            <a href="https://www.transfermarkt.com.tr/gumushanespor/startseite/verein/4574" target="_blank" class="text-warning text-decoration-none">
+                    <div class="card-body"> <!-- Kartın içeriğini tutan kapsayıcı. "card-body" sınıfı, bu div'in bir kart gövdesi olduğunu belirtir. Bu bölümde kartın başlığı ve açıklaması yer alır. -->
+                        <h2 class="card-title"> <!-- Kart başlığı. "card-title" sınıfı, bu h2'nin bir kart başlığı olduğunu belirtir. -->
+                            <a href="https://www.transfermarkt.com.tr/gumushanespor/startseite/verein/4574" target="_blank" class="text-warning text-decoration-none"> <!-- Başlığı tıklanabilir bir bağlantıya dönüştürür. "href" özniteliği, bağlantının hedef URL'sini belirtir. "target='_blank'" özniteliği, bağlantının yeni bir sekmede açılmasını sağlar. "class" özniteliği, bu bağlantının metnini uyarı renginde yapar ve alt çizgiyi kaldırır. -->
                                 Takımımız: Gümüşhanespor
                             </a>
                         </h2>
@@ -131,4 +131,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<footer class="text-center py-4 mt-5 border-top border-secondary">
+        <p class="mb-0 text-muted" style="color: #EBB014 !important;">&copy; 2026 Murat Can Soydaş - Sakarya Üniversitesi</p> <!-- Telif hakkı bilgisi. "mb-0" sınıfı, paragrafın altına boşluk eklememek için kullanılır. "text-muted" sınıfı, metni daha az belirgin yapar. -->
+</footer>
 </html>

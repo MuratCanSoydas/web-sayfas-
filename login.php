@@ -1,6 +1,4 @@
 <?php
-// Kendi Sakarya Üniversitesi öğrenci bilgilerini buraya girmelisin
-// Tırnak işaretlerini (") silmeden içindeki metni değiştir!
 $dogru_mail = "b251210095@ogr.sakarya.edu.tr";
 $dogru_sifre = "b251210095";
 

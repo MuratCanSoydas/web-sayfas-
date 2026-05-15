@@ -30,38 +30,38 @@
         </div>
     </nav>
 
-    <main class="container py-5 mt-4" id="app">
-        <div class="row justify-content-center">
+    <main class="container py-5 mt-4" id="app"> <!-- Ana içerik alanı. "container" sınıfı, içeriği sınırlamak ve ortalamak için kullanılır. "py-5" sınıfı, üst ve alt boşluk ekler, "mt-4" sınıfı ise üst boşluk ekler. "id" özniteliği, bu ana içeriğin Vue.js uygulaması tarafından kontrol edileceğini belirtir. -->
+        <div class="row justify-content-center"> <!-- İçeriği satır ve sütunlara bölmek için Bootstrap'ın grid sistemini kullanırız. "row" sınıfı, bir satır oluşturur. "justify-content-center" sınıfı, içeriği yatay olarak ortalar. -->
             
-            <div class="col-12 text-center mb-5">
-                <h1 class="display-5 text-warning mb-3"><i class="fa-solid fa-paper-plane me-3"></i>İletişime Geçin</h1>
-                <p class="lead">Görüş, öneri veya projeleriniz için aşağıdaki formu eksiksiz doldurunuz.</p>
+            <div class="col-12 text-center mb-5"> <!-- Başlık ve açıklama bölümü. "col-12" sınıfı, tüm ekran boyutlarında tam genişlikte bir alan oluşturur. "text-center" sınıfı, içeriği yatay olarak ortalar. "mb-5" sınıfı, alt boşluk ekler. -->
+                <h1 class="display-5 text-warning mb-3"><i class="fa-solid fa-paper-plane me-3"></i>İletişime Geçin</h1> <!-- Başlık. "display-5" sınıfı, büyük ve dikkat çekici bir başlık stili sağlar. "text-warning" sınıfı, başlık metnini sarı yapar. "mb-3" sınıfı, başlığın altına boşluk ekler. Font Awesome'dan bir uçak ikonu eklenir ve "me-3" sınıfı ile başlıktan sağa 3 birim boşluk bırakılır. -->
+                <p class="lead">Görüş, öneri veya projeleriniz için aşağıdaki formu eksiksiz doldurunuz.</p> <!-- Açıklama paragrafı. "lead" sınıfı, metni daha büyük ve vurgulu yapar. -->
             </div>
 
-            <div class="col-md-8 col-lg-7">
-                <div class="card p-4 p-md-5 bg-dark border-secondary shadow-lg">
+            <div class="col-md-8 col-lg-7"> <!-- Form bölümü. "col-md-8" sınıfı, orta ekranlarda 8 sütun genişliğinde bir alan oluşturur. "col-lg-7" sınıfı ise büyük ekranlarda 7 sütun genişliğinde bir alan oluşturur, böylece formun genişliği ekran boyutuna göre uyum sağlar. -->
+                <div class="card p-4 p-md-5 bg-dark border-secondary shadow-lg"> <!-- Formu içeren kart. "card" sınıfı, Bootstrap'in kart bileşenini kullanır. "p-4" sınıfı, küçük ekranlarda kartın içindeki öğeler arasında boşluk eklerken, "p-md-5" sınıfı, orta ve büyük ekranlarda daha fazla boşluk ekler. "bg-dark" sınıfı, kartın arka planını koyu yapar. "border-secondary" sınıfı, kartın kenarlığını gri yapar. "shadow-lg" sınıfı, büyük bir gölge efekti ekler. -->
                     
-                    <form id="contactForm" action="gonder.php" method="POST">
+                    <form id="contactForm" action="gonder.php" method="POST"> <!-- İletişim formu. "id" özniteliği, formun JavaScript ile kolayca seçilmesini sağlar. "action" özniteliği, form verilerinin gönderileceği sunucu tarafı dosyasını belirtir. "method" özniteliği ise form verilerinin nasıl gönderileceğini belirtir; burada "POST" yöntemi kullanılır, bu da verilerin URL'de görünmeden gönderilmesini sağlar. -->
                         
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <label class="form-label text-warning"><i class="fa-solid fa-user me-2"></i>Adınız Soyadınız</label>
-                                <input type="text" name="ad" id="ad" class="form-control bg-transparent text-light border-secondary" v-model="form.ad" placeholder="Örn: Murat Can">
+                        <div class="row"> <!-- Formu satır ve sütunlara bölmek için Bootstrap'ın grid sistemini kullanırız. "row" sınıfı, bir satır oluşturur. -->
+                            <div class="col-md-6 mb-4"> <!-- Ad soyad bölümü. "col-md-6" sınıfı, orta ekranlarda 6 sütun genişliğinde bir alan oluşturur. "mb-4" sınıfı, alt boşluk ekler. -->
+                                <label class="form-label text-warning"><i class="fa-solid fa-user me-2"></i>Adınız Soyadınız</label> <!-- Ad soyad etiketi. "form-label" sınıfı, form etiketlerine özel stiller uygular. "text-warning" sınıfı, metni sarı yapar. Font Awesome'dan bir kullanıcı ikonu eklenir ve "me-2" sınıfı ile etiket metninden sağa 2 birim boşluk bırakılır. -->
+                                <input type="text" name="ad" id="ad" class="form-control bg-transparent text-light border-secondary" v-model="form.ad" placeholder="Örn: Murat Can"> <!-- Ad soyad girişi. "type" özniteliği, giriş türünü belirtir; burada "text" kullanılır, bu da kullanıcıdan metin girişi bekler. "name" özniteliği, form verilerinin sunucuya gönderilirken kullanılacak adını belirtir. "id" özniteliği, bu giriş alanının benzersiz tanımlayıcısını sağlar. "class" özniteliği, Bootstrap sınıfları ve özel stiller içerir: "form-control" sınıfı, giriş alanına Bootstrap'in standart form kontrol stillerini uygular. "bg-transparent" sınıfı, giriş alanının arka planını şeffaf yapar. "text-light" sınıfı, metni açık renk yapar. "border-secondary" sınıfı, kenarlığı gri yapar. "v-model" özniteliği, Vue.js ile çift yönlü veri bağlama sağlar; bu, form.ad değişkeninin bu giriş alanının değerini tutmasını sağlar. "placeholder" özniteliği ise giriş alanında kullanıcıya örnek bir metin gösterir. -->
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <label class="form-label text-warning"><i class="fa-solid fa-envelope me-2"></i>E-posta Adresi</label>
-                                <input type="email" name="email" id="email" class="form-control bg-transparent text-light border-secondary" v-model="form.email" placeholder="mail@ornek.com">
+                            <div class="col-md-6 mb-4"> <!-- E-posta bölümü. "col-md-6" sınıfı, orta ekranlarda 6 sütun genişliğinde bir alan oluşturur. "mb-4" sınıfı, alt boşluk ekler. -->
+                                <label class="form-label text-warning"><i class="fa-solid fa-envelope me-2"></i>E-posta Adresi</label> <!-- E-posta etiketi. "form-label" sınıfı, form etiketlerine özel stiller uygular. "text-warning" sınıfı, metni sarı yapar. Font Awesome'dan bir zarf ikonu eklenir ve "me-2" sınıfı ile etiket metninden sağa 2 birim boşluk bırakılır. -->
+                                <input type="email" name="email" id="email" class="form-control bg-transparent text-light border-secondary" v-model="form.email" placeholder="mail@ornek.com"> <!-- E-posta girişi. "type" özniteliği, giriş türünü belirtir; burada "email" kullanılır, bu da kullanıcıdan geçerli bir e-posta adresi girmesini bekler. "name" özniteliği, form verilerinin sunucuya gönderilirken kullanılacak adını belirtir. "id" özniteliği, bu giriş alanının benzersiz tanımlayıcısını sağlar. "class" özniteliği, Bootstrap sınıfları ve özel stiller içerir: "form-control" sınıfı, giriş alanına Bootstrap'in standart form kontrol stillerini uygular. "bg-transparent" sınıfı, giriş alanının arka planını şeffaf yapar. "text-light" sınıfı, metni açık renk yapar. "border-secondary" sınıfı, kenarlığı gri yapar. "v-model" özniteliği, Vue.js ile çift yönlü veri bağlama sağlar; bu, form.email değişkeninin bu giriş alanının değerini tutmasını sağlar. "placeholder" özniteliği ise giriş alanında kullanıcıya örnek bir metin gösterir. -->
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6 mb-4">
-                                <label class="form-label text-warning"><i class="fa-solid fa-phone me-2"></i>Telefon No</label>
-                                <input type="text" name="tel" id="tel" class="form-control bg-transparent text-light border-secondary" v-model="form.tel" placeholder="0555 123 4567">
+                                <label class="form-label text-warning"><i class="fa-solid fa-phone me-2"></i>Telefon No</label> <!-- Telefon no etiketi. "form-label" sınıfı, form etiketlerine özel stiller uygular. "text-warning" sınıfı, metni sarı yapar. Font Awesome'dan bir telefon ikonu eklenir ve "me-2" sınıfı ile etiket metninden sağa 2 birim boşluk bırakılır. -->
+                                <input type="text" name="tel" id="tel" class="form-control bg-transparent text-light border-secondary" v-model="form.tel" placeholder="0555 123 4567"> 
                             </div>
                             <div class="col-md-6 mb-4">
-                                <label class="form-label text-warning"><i class="fa-solid fa-layer-group me-2"></i>Konu</label>
-                                <select name="konu" id="konu" class="form-select bg-dark text-light border-secondary" v-model="form.konu">
+                                <label class="form-label text-warning"><i class="fa-solid fa-layer-group me-2"></i>Konu</label> <!-- Konu etiketi. "form-label" sınıfı, form etiketlerine özel stiller uygular. "text-warning" sınıfı, metni sarı yapar. Font Awesome'dan bir katman grubu ikonu eklenir ve "me-2" sınıfı ile etiket metninden sağa 2 birim boşluk bırakılır. -->
+                                <select name="konu" id="konu" class="form-select bg-dark text-light border-secondary" v-model="form.konu"> 
                                     <option value="" class="text-muted">Seçiniz...</option>
                                     <option value="Destek">Teknik Destek</option>
                                     <option value="Öneri">Proje Önerisi</option>
@@ -71,13 +71,13 @@
                         </div>
 
                         <div class="mb-4">
-                            <label class="form-label text-warning"><i class="fa-solid fa-comment-dots me-2"></i>Mesajınız / Öneriniz</label>
+                            <label class="form-label text-warning"><i class="fa-solid fa-comment-dots me-2"></i>Mesajınız / Öneriniz</label> <!-- Mesajınız etiketi. "form-label" sınıfı, form etiketlerine özel stiller uygular. "text-warning" sınıfı, metni sarı yapar. Font Awesome'dan bir yorum ikonu eklenir ve "me-2" sınıfı ile etiket metninden sağa 2 birim boşluk bırakılır. -->
                             <textarea name="mesaj" id="mesaj" class="form-control bg-transparent text-light border-secondary" rows="5" v-model="form.mesaj" placeholder="Düşüncelerinizi buraya detaylıca yazabilirsiniz..."></textarea>
                         </div>
 
                         <div class="mb-4 p-3 border border-secondary rounded bg-transparent">
-                            <label class="form-label d-block text-warning mb-3"><i class="fa-solid fa-venus-mars me-2"></i>Cinsiyet</label>
-                            <div class="form-check form-check-inline">
+                            <label class="form-label d-block text-warning mb-3"><i class="fa-solid fa-venus-mars me-2"></i>Cinsiyet</label> <!-- Cinsiyet etiketi. "form-label" sınıfı, form etiketlerine özel stiller uygular. "text-warning" sınıfı, metni sarı yapar. Font Awesome'dan bir kadın-erkek ikonu eklenir ve "me-2" sınıfı ile etiket metninden sağa 2 birim boşluk bırakılır. -->
+                            <div class="form-check form-check-inline"> 
                                 <input class="form-check-input" type="radio" name="cinsiyet" value="Erkek" v-model="form.cinsiyet" id="erkek">
                                 <label class="form-check-label text-light" for="erkek">Erkek</label>
                             </div>
@@ -92,10 +92,10 @@
                             <label class="form-check-label text-light" for="onay">Kişisel verilerimin işlenmesini okudum ve <span class="text-warning">onaylıyorum.</span></label>
                         </div>
 
-                        <div class="d-grid gap-3 d-md-flex justify-content-md-end mt-4">
-                            <button type="reset" class="btn btn-outline-secondary px-4">Formu Temizle</button>
-                            <button type="button" class="btn btn-outline-warning px-4" onclick="validateNative()">Native JS ile Gönder</button>
-                            <button type="button" class="btn btn-warning px-4 fw-bold text-dark" @click="validateVue">
+                        <div class="d-grid gap-3 d-md-flex justify-content-md-end mt-4"> <!-- Buton grubu. "d-grid" sınıfı, küçük ekranlarda butonları alt alta dizer. "gap-3" sınıfı, butonlar arasında boşluk ekler. "d-md-flex" sınıfı, orta ve büyük ekranlarda butonları esnek bir konteyner içinde düzenler. "justify-content-md-end" sınıfı, orta ve büyük ekranlarda butonları sağa hizalar. "mt-4" sınıfı ise üst boşluk ekler. -->
+                            <button type="reset" class="btn btn-outline-secondary px-4">Formu Temizle</button> <!-- Formu sıfırlayan buton. "type" özniteliği, butonun işlevini belirtir; burada "reset" kullanılır, bu da formdaki tüm girişleri varsayılan değerlerine sıfırlar. "class" özniteliği, Bootstrap sınıfları içerir: "btn" sınıfı, butona temel bir buton stili uygular. "btn-outline-secondary" sınıfı, butonu gri bir kenarlıkla ve şeffaf arka planla stilize eder. "px-4" sınıfı ise butonun yatay iç boşluğunu artırır. -->
+                            <button type="button" class="btn btn-outline-warning px-4" onclick="validateNative()">Native JS ile Gönder</button> <!-- Formu göndermek için bir buton. "type" özniteliği, butonun işlevini belirtir; burada "button" kullanılır, bu da butonun varsayılan olarak formu göndermemesini sağlar. "class" özniteliği, Bootstrap sınıfları içerir: "btn" sınıfı, butona temel bir buton stili uygular. "btn-outline-warning" sınıfı, butonu sarı bir kenarlıkla ve şeffaf arka planla stilize eder. "px-4" sınıfı ise butonun yatay iç boşluğunu artırır. "onclick" özniteliği, butona tıklandığında çalışacak JavaScript fonksiyonunu belirtir; burada "validateNative()" fonksiyonu çağrılır, bu fonksiyonun form verilerini doğrulaması ve ardından formu göndermesi beklenir. -->
+                            <button type="button" class="btn btn-warning px-4 fw-bold text-dark" @click="validateVue"> <!-- Formu göndermek için bir buton. "type" özniteliği, butonun işlevini belirtir; burada "button" kullanılır, bu da butonun varsayılan olarak formu göndermemesini sağlar. "class" özniteliği, Bootstrap sınıfları içerir: "btn" sınıfı, butona temel bir buton stili uygular. "btn-warning" sınıfı, butonu sarı bir kenarlıkla ve koyu arka planla stilize eder. "px-4" sınıfı ise butonun yatay iç boşluğunu artırır. "fw-bold" sınıfı, metni kalın yapar. "text-dark" sınıfı, metni koyu renk yapar. " @click="validateVue" özniteliği, butona tıklandığında çalışacak Vue.js metodunu belirtir; burada "validateVue" metodu çağrılır, bu metodun form verilerini doğrulaması ve ardından formu göndermesi beklenir. -->
                                 <i class="fa-brands fa-vuejs me-2"></i>Vue.js ile Gönder
                             </button>
                         </div>
@@ -107,7 +107,7 @@
     </main>
 
     <footer class="text-center py-4 mt-5 border-top border-secondary">
-        <p class="mb-0 text-muted">&copy; 2026 Murat Can Soydaş - Sakarya Üniversitesi</p>
+        <p class="mb-0 text-muted" style="color: #EBB014 !important;">&copy; 2026 Murat Can Soydaş - Sakarya Üniversitesi</p> <!-- Telif hakkı bilgisi. "mb-0" sınıfı, paragrafın altına boşluk eklememek için kullanılır. "text-muted" sınıfı, metni daha az belirgin yapar. -->
     </footer>
 
     <script src="js/script.js"></script>

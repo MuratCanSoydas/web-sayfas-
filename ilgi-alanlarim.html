@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Sekme Tasarımı (Pills) Özelleştirmesi */
-        .nav-pills .nav-link {
+        .nav-pills .nav-link { 
             color: #f8fafc;
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 10px;
@@ -34,15 +34,15 @@
         }
     </style>
 </head>
-<body class="bg-dark text-light">
+<body class="bg-dark text-light"> <!-- Sayfanın arka planını koyu yapar ve metin rengini açık yaparız, böylece kontrast sağlanır ve okunabilirlik artar. -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Murat Can Soydaş</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm"> <!-- Bootstrap navbar'ını kullanarak bir navigasyon çubuğu oluştururuz. "navbar-dark" sınıfı, koyu temaya uygun bir görünüm sağlar. "shadow-sm" sınıfı ise hafif bir gölge efekti ekler. -->
+        <div class="container"> 
+            <a class="navbar-brand" href="index.html">Murat Can Soydaş</a> <!-- Navbar'ın sol tarafında yer alan marka veya logo kısmı. "navbar-brand" sınıfı, bu bölüme özel stiller uygular. Bu örnekte, marka adı olarak "Murat Can Soydaş" kullanılmıştır ve tıklandığında "index.html" sayfasına yönlendirir. -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu"> <!-- Mobil cihazlarda navbar'ın açılır menüye dönüşmesini sağlayan düğme. "data-bs-toggle" ve "data-bs-target" öznitelikleri, Bootstrap'in JavaScript bileşenlerini kullanarak menüyü kontrol eder. -->
+                <span class="navbar-toggler-icon"></span> <!-- Düğmenin içinde, Bootstrap tarafından sağlanan bir ikon kullanılır. "navbar-toggler-icon" sınıfı, bu ikonu belirtir ve genellikle üç çizgiden oluşan bir hamburger menü simgesi olarak görünür. -->
             </button>
-            <div class="collapse navbar-collapse" id="anaMenu">
+            <div class="collapse navbar-collapse" id="anaMenu"> <!-- Navbar'ın geniş ekranlarda gösterilecek menü kısmı. "collapse navbar-collapse" sınıfları, bu bölümü mobil cihazlarda gizler ve düğmeye tıklandığında gösterir. "id" özniteliği, bu bölüme JavaScript ile erişilmesini sağlar. -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
                     <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
@@ -55,39 +55,34 @@
         </div>
     </nav>
 
-    <main class="container py-5 mt-4">
+    <main class="container py-5 mt-4"> <!-- Sayfanın ana içeriğini tutan bölüm. "container" sınıfı, içeriği sayfa ortasında ve belirli bir genişlikte tutar. "py-5" sınıfı, üst ve alt boşluk ekler, "mt-4" sınıfı ise üst boşluk ekler. -->
         
         <div class="text-center mb-5">
-            <h1 class="display-5 text-warning mb-3"><i class="fa-solid fa-layer-group me-3"></i>Kişisel Kütüphane</h1>
-            <p class="lead text-muted" style="color: #f8fafc !important;">Kategori tabanlı dinamik veri çekimi.</p>
+            <h1 class="display-5 text-warning mb-3"><i class="fa-solid fa-layer-group me-3"></i>Kişisel Kütüphane</h1> <!-- Başlık. "display-5" sınıfı, büyük ve dikkat çekici bir başlık stili sağlar. "text-warning" sınıfı, başlık metnini sarı yapar. "mb-3" sınıfı, başlığın altına boşluk ekler. Font Awesome'dan "layer-group" ikonunu ekler. "me-3" sınıfı, ikon ile başlık metni arasında sağa doğru boşluk ekler. -->
+            <p class="lead text-muted" style="color: #f8fafc !important;">Kategori tabanlı dinamik veri çekimi.</p> <!-- Alt başlık. "lead" sınıfı, alt başlığı daha belirgin yapar. "text-muted" sınıfı, metni daha az belirgin yapar. "style" özniteliği ile metin rengini açık yaparak kontrast sağlar. -->
         </div>
         
-        <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active px-4 py-2" id="pills-dizi-tab" data-bs-toggle="pill" data-bs-target="#pills-dizi" type="button" role="tab" onclick="loadContent('dizi')">
-                    <i class="fa-solid fa-tv me-2"></i>Diziler
+        <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist"> <!-- Bootstrap'ın nav-pills sınıfını kullanarak sekmeler oluştururuz. "mb-5" sınıfı, sekmelerin altına boşluk ekler. "justify-content-center" sınıfı, sekmeleri yatay olarak ortalar. "id" ve "role" öznitelikleri, sekmelerin erişilebilirliğini artırır ve JavaScript ile kontrol edilmesini sağlar. -->
+            <li class="nav-item" role="presentation"> <!-- İlk sekme. "nav-item" sınıfı, sekme öğesini belirtir. "role" özniteliği, bu öğenin bir sekme olduğunu belirtir. -->
+                <button class="nav-link active px-4 py-2" id="pills-dizi-tab" data-bs-toggle="pill" data-bs-target="#pills-dizi" type="button" role="tab" onclick="loadContent('dizi')"> <!-- Sekme düğmesi. "nav-link" sınıfı, sekme bağlantısını belirtir. "active" sınıfı, bu sekmenin varsayılan olarak aktif olduğunu gösterir. "px-4" ve "py-2" sınıfları, sekme düğmesine yatay ve dikey padding ekler. "id", "data-bs-toggle", "data-bs-target", "type", ve "role" öznitelikleri, Bootstrap'in JavaScript bileşenleri tarafından sekmenin kontrol edilmesini sağlar. "onclick" özniteliği, bu sekmeye tıklandığında "loadContent('dizi')" fonksiyonunu çağırır, böylece ilgili içeriğin yüklenmesini sağlar. Font Awesome'dan "tv" ikonunu ekler ve ikon ile metin arasında sağa doğru boşluk ekler. -->
+                    <i class="fa-solid fa-tv me-2"></i>Diziler  <!-- Font Awesome'dan "tv" ikonunu ekler. "fa-solid fa-tv" sınıfları, bu ikonu belirtir. "me-2" sınıfı, ikon ile metin arasında sağa doğru boşluk ekler. -->
                 </button>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link px-4 py-2" id="pills-oyun-tab" data-bs-toggle="pill" data-bs-target="#pills-oyun" type="button" role="tab" onclick="loadContent('oyun')">
-                    <i class="fa-solid fa-gamepad me-2"></i>Oyunlar
+            <li class="nav-item" role="presentation"> <!-- İkinci sekme. "nav-item" sınıfı, sekme öğesini belirtir. "role" özniteliği, bu öğenin bir sekme olduğunu belirtir. -->
+                <button class="nav-link px-4 py-2" id="pills-oyun-tab" data-bs-toggle="pill" data-bs-target="#pills-oyun" type="button" role="tab" onclick="loadContent('oyun')"> <!-- Sekme düğmesi. "nav-link" sınıfı, sekme bağlantısını belirtir. "px-4" ve "py-2" sınıfları, sekme düğmesine yatay ve dikey padding ekler. "id", "data-bs-toggle", "data-bs-target", "type", ve "role" öznitelikleri, Bootstrap'in JavaScript bileşenleri tarafından sekmenin kontrol edilmesini sağlar. "onclick" özniteliği, bu sekmeye tıklandığında "loadContent('oyun')" fonksiyonunu çağırır, böylece ilgili içeriğin yüklenmesini sağlar. Font Awesome'dan "gamepad" ikonunu ekler ve ikon ile metin arasında sağa doğru boşluk ekler. -->
+                    <i class="fa-solid fa-gamepad me-2"></i>Oyunlar <!-- Font Awesome'dan "gamepad" ikonunu ekler. "fa-solid fa-gamepad" sınıfları, bu ikonu belirtir. "me-2" sınıfı, ikon ile metin arasında sağa doğru boşluk ekler. -->
                 </button>
             </li>
         </ul>
 
-        <div id="loading" class="text-center my-5 d-none">
-            <div class="spinner-border text-warning" role="status"></div>
-            <p class="mt-2 text-warning font-monospace">Veriler Getiriliyor...</p>
+        <div id="loading" class="text-center my-5 d-none"> <!-- Veriler yüklenirken gösterilecek yükleme göstergesi. "text-center" sınıfı, içeriği yatay olarak ortalar. "my-5" sınıfı, üst ve alt boşluk ekler. "d-none" sınıfı, bu bölümü varsayılan olarak gizler. JavaScript ile veri yüklenirken bu sınıf kaldırılarak gösterilir. -->
+            <div class="spinner-border text-warning" role="status"></div> <!-- Bootstrap'ın spinner-border sınıfını kullanarak bir yükleme göstergesi oluştururuz. "text-warning" sınıfı, spinner'ı sarı yapar. "role" özniteliği, bu öğenin bir yükleme göstergesi olduğunu belirtir. -->
+            <p class="mt-2 text-warning font-monospace">Veriler Getiriliyor...</p> <!-- Yükleme göstergesinin altında, kullanıcıya verilerin getirildiğini bildiren bir mesaj. "mt-2" sınıfı, mesajın üstüne boşluk ekler. "text-warning" sınıfı, metni sarı yapar. "font-monospace" sınıfı, metni monospaced (sabit genişlikte) bir yazı tipine dönüştürür, bu da teknik bir görünüm sağlar. -->
         </div>
 
-        <div class="row" id="api-results"></div>
+        <div class="row" id="api-results"></div> <!-- API'den çekilen verilerin gösterileceği alan. "row" sınıfı, Bootstrap'ın grid sistemini kullanarak içeriği satır olarak düzenler. "id" özniteliği, JavaScript tarafından bu bölüme erişilmesini sağlar ve API'den çekilen verilerin dinamik olarak eklenmesine olanak tanır. -->
 
     </main>
-
-    <footer class="text-center py-4 mt-5 border-top border-secondary">
-        <p class="mb-0 text-muted">&copy; 2026 Murat Can Soydaş - Sakarya Üniversitesi</p>
-    </footer>
-
     <script>
         const favoriler = {
             dizi: ['Fringe', 'Sherlock Holmes', 'Hekimoğlu', 'Shameless', 'The Wire', 'Breaking Bad', 'Game of Thrones', 'The Crown', 'Stranger Things', 'The Mandalorian'],
@@ -103,32 +98,51 @@
             ]
         };
 
-        document.addEventListener("DOMContentLoaded", () => {
+        // Sayfa DOM yapısı tamamen yüklendiğinde içindeki fonksiyonu tetikler.
+        document.addEventListener("DOMContentLoaded", () => { 
+            // Sayfa açılışında varsayılan olarak dizilerin yüklenmesi için fonksiyonu 'dizi' parametresiyle başlatır.
             loadContent('dizi');
-        });
+        }); 
 
-        async function loadContent(kategori) {
-            const container = document.getElementById('api-results');
+        // Asenkron (async) veri çekme fonksiyonu. Kategori parametresine göre ('dizi' veya 'oyun') işlem yapar.
+        async function loadContent(kategori) { 
+            // HTML içindeki sonuçların basılacağı div elementini yakalar.
+            const container = document.getElementById('api-results'); 
+            // HTML içindeki yükleniyor (spinner) animasyon elementini yakalar.
             const loader = document.getElementById('loading');
             
+            // Yeni veri yüklenmeden önce ekrandaki eski kartları temizler.
             container.innerHTML = '';
+            // Veri çekilme süreci başladığı için yükleniyor animasyonunun gizlilik sınıfını ('d-none') kaldırıp görünür yapar.
             loader.classList.remove('d-none');
 
+            // API'den veya statik diziden gelecek verilerin HTML tagleriyle birleştirilip tutulacağı boş string değişkeni.
             let htmlCikti = '';
 
-            // film referansı if bloğundan kaldırıldı
+            // Seçilen sekme 'dizi' ise TVMaze API'sine istek atacak bloğu başlatır.
             if (kategori === 'dizi') {
+                // 'favoriler' objesinin içindeki 'dizi' array'ini alır.
                 const liste = favoriler[kategori];
                 
+                // Array içindeki her bir dizi ismi için teker teker döngüye girer.
                 for (let i = 0; i < liste.length; i++) {
                     try {
+                        // TVMaze API'sine ilgili dizi ismiyle (liste[i]) asenkron GET isteği atar ve yanıtı bekler (await).
                         const response = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${liste[i]}`);
+                        
+                        // HTTP HTTP yanıt kodu 200-299 arasındaysa (başarılıysa) bloğa girer.
                         if (response.ok) {
+                            // Gelen ham JSON verisini JavaScript objesine dönüştürür ve bekler.
                             const data = await response.json();
+                            
+                            // Gelen veride resim varsa orta boyunu (medium) alır, yoksa hata vermemesi için placeholder (yer tutucu) görsel atar.
                             const resim = data.image ? data.image.medium : 'https://via.placeholder.com/210x295?text=Gorsel+Yok';
+                            // Gelen veride puan varsa alır, yoksa mantıksal OR (||) operatörüyle '-' yazdırır.
                             const puan = data.rating.average || '-';
+                            // Gelen veride özet (summary) varsa ilk 90 karakterini kesip sonuna '...' ekler, yoksa 'Özet yok.' yazdırır.
                             const özet = data.summary ? data.summary.substring(0, 90) + '...' : 'Özet yok.';
-
+                            
+                            // Elde edilen API verilerini HTML kalıbının (Template Literal) içine gömer ve mevcut htmlCikti değişkenine ekler.
                             htmlCikti += `
                                 <div class="col-md-3 mb-4">
                                     <div class="card item-card h-100 bg-dark border-secondary shadow">
@@ -144,11 +158,16 @@
                             `;
                         }
                     } catch (err) {
+                        // Fetch işlemi sırasında ağ bağlantısı kopması veya sunucu çökmesi gibi durumlarda hatayı konsola basar.
                         console.error("API Fetch Hatası:", err);
                     }
                 }
-            } else if (kategori === 'oyun') {
+            } 
+            // Seçilen sekme 'oyun' ise API'ye gitmek yerine statik array üzerinden işlem yapar.
+            else if (kategori === 'oyun') {
+                // 'oyun' array'indeki her bir eleman (obje) için döngü başlatır.
                 favoriler.oyun.forEach(oyun => {
+                    // Statik objeden gelen verileri HTML kalıbına gömerek htmlCikti değişkenine ekler.
                     htmlCikti += `
                         <div class="col-md-4 mb-4">
                             <div class="card item-card h-100 bg-dark border-secondary shadow">
@@ -164,10 +183,16 @@
                 });
             }
 
+            // Döngüler bitip HTML çıktısı hazırlandığında yükleniyor animasyonunu ('d-none' sınıfını ekleyerek) gizler.
             loader.classList.add('d-none');
+            // Hazırlanan tüm HTML bloklarını ana kapsayıcı div'in içerisine enjekte eder.
             container.innerHTML = htmlCikti;
-        }
+        }        // "loadContent" fonksiyonu, seçilen kategoriye göre içerik yükler. "kategori" parametresi, hangi tür içeriğin yükleneceğini belirtir (örneğin, "dizi" veya "oyun"). Fonksiyon, API'den veri çekmek için "fetch" kullanır ve çekilen verileri HTML formatında düzenleyerek sayfada gösterir. Yükleme sırasında bir spinner göstermek için "loading" elementinin sınıflarını kontrol eder. Hata durumunda, konsola hata mesajı yazdırır.
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<footer class="text-center py-4 mt-5 border-top border-secondary">
+        <p class="mb-0 text-muted" style="color: #EBB014 !important;">&copy; 2026 Murat Can Soydaş - Sakarya Üniversitesi</p> <!-- Telif hakkı bilgisi. "mb-0" sınıfı, paragrafın altına boşluk eklememek için kullanılır. "text-muted" sınıfı, metni daha az belirgin yapar. -->
+</footer>
 </html>

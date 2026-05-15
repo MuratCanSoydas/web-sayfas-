@@ -1,27 +1,27 @@
 <?php
-// gonder.php içeriği
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $ad = htmlspecialchars($_POST['ad']);
-    $email = htmlspecialchars($_POST['email']);
-    $tel = htmlspecialchars($_POST['tel']);
-    $konu = htmlspecialchars($_POST['konu']);
-    $cinsiyet = isset($_POST['cinsiyet']) ? htmlspecialchars($_POST['cinsiyet']) : 'Belirtilmedi';
-    $mesaj = htmlspecialchars($_POST['mesaj']); // YENİ EKLENEN MESAJ DEĞİŞKENİ
-    $onay = isset($_POST['onay']) ? 'Kabul Edildi' : 'Reddedildi';
+if ($_SERVER["REQUEST_METHOD"] == "POST") // Formun POST yöntemiyle gönderilip gönderilmediğini kontrol eder. Eğer form gönderilmişse, form verilerini işlemek için aşağıdaki kod bloğu çalışır.
+    { 
+        $ad = htmlspecialchars($_POST['ad']); // Kullanıcı tarafından gönderilen "ad" verisini alır ve HTML özel karakterlerini güvenli hale getirir. Bu, XSS saldırılarına karşı koruma sağlar. "htmlspecialchars" fonksiyonu, özel karakterleri HTML entity'lerine dönüştürerek zararlı kodların çalışmasını engeller.
+        $email = htmlspecialchars($_POST['email']); // Kullanıcı tarafından gönderilen "email" verisini alır ve HTML özel karakterlerini güvenli hale getirir. Bu, XSS saldırılarına karşı koruma sağlar. "htmlspecialchars" fonksiyonu, özel karakterleri HTML entity'lerine dönüştürerek zararlı kodların çalışmasını engeller.
+        $tel = htmlspecialchars($_POST['tel']); // Kullanıcı tarafından gönderilen "tel" verisini alır ve HTML özel karakterlerini güvenli hale getirir. Bu, XSS saldırılarına karşı koruma sağlar. "htmlspecialchars" fonksiyonu, özel karakterleri HTML entity'lerine dönüştürerek zararlı kodların çalışmasını engeller.
+        $konu = htmlspecialchars($_POST['konu']); // Kullanıcı tarafından gönderilen "konu" verisini alır ve HTML özel karakterlerini güvenli hale getirir. Bu, XSS saldırılarına karşı koruma sağlar. "htmlspecialchars" fonksiyonu, özel karakterleri HTML entity'lerine dönüştürerek zararlı kodların çalışmasını engeller.
+        $cinsiyet = isset($_POST['cinsiyet']) ? htmlspecialchars($_POST['cinsiyet']) : 'Belirtilmedi'; // Kullanıcı tarafından gönderilen "cinsiyet" verisini alır. Eğer "cinsiyet" verisi gönderilmemişse, "Belirtilmedi" olarak varsayılan bir değer atanır. "htmlspecialchars" fonksiyonu, özel karakterleri HTML entity'lerine dönüştürerek zararlı kodların çalışmasını engeller.
+        $mesaj = htmlspecialchars($_POST['mesaj']); // Kullanıcı tarafından gönderilen "mesaj" verisini alır ve HTML özel karakterlerini güvenli hale getirir. Bu, XSS saldırılarına karşı koruma sağlar. "htmlspecialchars" fonksiyonu, özel karakterleri HTML entity'lerine dönüştürerek zararlı kodların çalışmasını engeller.
+        $onay = isset($_POST['onay']) ? 'Kabul Edildi' : 'Reddedildi'; // Kullanıcı tarafından gönderilen "onay" verisini kontrol eder. Eğer "onay" verisi gönderilmişse, "Kabul Edildi" olarak atanır. Gönderilmemişse, "Reddedildi" olarak atanır. Bu, kullanıcının formu onaylayıp onaylamadığını belirtmek için kullanılır.
 
-    echo "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;'>";
-    echo "<h2 style='color: #198754; text-align: center;'>Form Başarıyla Gönderildi!</h2>";
-    echo "<hr>";
-    echo "<p><strong>Ad Soyad:</strong> " . $ad . "</p>";
-    echo "<p><strong>E-posta:</strong> " . $email . "</p>";
-    echo "<p><strong>Telefon:</strong> " . $tel . "</p>";
-    echo "<p><strong>Konu:</strong> " . $konu . "</p>";
-    echo "<p><strong>Cinsiyet:</strong> " . $cinsiyet . "</p>";
-    echo "<p><strong>Mesaj:</strong> " . nl2br($mesaj) . "</p>"; // EKRANA YAZDIRILIYOR
-    echo "<p><strong>Onay Durumu:</strong> " . $onay . "</p>";
-    echo "<br><div style='text-align: center;'><a href='iletisim.html' style='padding: 10px 20px; background-color: #0d6efd; color: white; text-decoration: none; border-radius: 5px;'>Geri Dön</a></div>";
-    echo "</div>";
-} else {
-    header("Location: iletisim.html");
-}
+        echo "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;'>"; // Form verilerini ekrana yazdırmak için bir div oluştururuz. Bu div, form verilerini görsel olarak düzenlemek için stillendirilmiştir. "font-family" özelliği, yazı tipini Arial olarak ayarlar. "max-width" özelliği, div'in maksimum genişliğini 600 piksel olarak sınırlar. "margin" özelliği, div'i sayfanın ortasına yerleştirir. "padding" özelliği, div'in içindeki içeriğe boşluk ekler. "border" özelliği, div'e gri bir kenarlık ekler. "border-radius" özelliği, div'in köşelerini yuvarlar. "background-color" özelliği, div'in arka plan rengini açık gri yapar.
+        echo "<h2 style='color: #198754; text-align: center;'>Form Başarıyla Gönderildi!</h2>"; // Formun başarıyla gönderildiğini belirten bir başlık ekler. "color" özelliği, başlık metninin rengini yeşil yapar. "text-align" özelliği, başlığı yatay olarak ortalar.
+        echo "<hr>"; // Başlık ile form verileri arasında görsel bir ayrım oluşturmak için yatay bir çizgi ekler.
+        echo "<p><strong>Ad Soyad:</strong> " . $ad . "</p>"; // Kullanıcının gönderdiği "ad" verisini ekrana yazdırır. "<strong>" etiketi, "Ad Soyad:" metnini kalın yapar. "." operatörü, metin ve değişkeni birleştirir.
+        echo "<p><strong>E-posta:</strong> " . $email . "</p>"; // Kullanıcının gönderdiği "email" verisini ekrana yazdırır. "<strong>" etiketi, "E-posta:" metnini kalın yapar. "." operatörü, metin ve değişkeni birleştirir.
+        echo "<p><strong>Telefon:</strong> " . $tel . "</p>"; // Kullanıcının gönderdiği "tel" verisini ekrana yazdırır. "<strong>" etiketi, "Telefon:" metnini kalın yapar. "." operatörü, metin ve değişkeni birleştirir.
+        echo "<p><strong>Konu:</strong> " . $konu . "</p>"; // Kullanıcının gönderdiği "konu" verisini ekrana yazdırır. "<strong>" etiketi, "Konu:" metnini kalın yapar. "." operatörü, metin ve değişkeni birleştirir.
+        echo "<p><strong>Cinsiyet:</strong> " . $cinsiyet . "</p>"; // Kullanıcının gönderdiği "cinsiyet" verisini ekrana yazdırır. "<strong>" etiketi, "Cinsiyet:" metnini kalın yapar. "." operatörü, metin ve değişkeni birleştirir.
+        echo "<p><strong>Mesaj:</strong> " . nl2br($mesaj) . "</p>"; // Kullanıcının gönderdiği "mesaj" verisini ekrana yazdırır. "<strong>" etiketi, "Mesaj:" metnini kalın yapar. "." operatörü, metin ve değişkeni birleştirir. "nl2br" fonksiyonu, mesaj içindeki yeni satır karakterlerini HTML <br> etiketlerine dönüştürerek mesajın formatını korur.
+        echo "<p><strong>Onay Durumu:</strong> " . $onay . "</p>"; // Kullanıcının gönderdiği "onay" verisini ekrana yazdırır. "<strong>" etiketi, "Onay Durumu:" metnini kalın yapar. "." operatörü, metin ve değişkeni birleştirir.   
+        echo "<br><div style='text-align: center;'><a href='iletisim.html' style='padding: 10px 20px; background-color: #0d6efd; color: white; text-decoration: none; border-radius: 5px;'>Geri Dön</a></div>"; // Form verilerini görüntüledikten sonra, kullanıcıya iletişim sayfasına geri dönmesi için bir bağlantı ekler. Bu bağlantı, "Geri Dön" metniyle gösterilir ve tıklandığında "iletisim.html" sayfasına yönlendirir. Bağlantıya stil verilerek bir buton gibi görünmesi sağlanır. "padding" özelliği, bağlantının içindeki metne boşluk ekler. "background-color" özelliği, bağlantının arka plan rengini mavi yapar. "color" özelliği, bağlantı metninin rengini beyaz yapar. "text-decoration" özelliği, bağlantının altını çizmez. "border-radius" özelliği, bağlantının köşelerini yuvarlar.
+        echo "</div>";
+    } else  {
+                header("Location: iletisim.html"); // Eğer form POST yöntemiyle gönderilmemişse, kullanıcıyı iletişim sayfasına yönlendirir. Bu, formun doğrudan URL üzerinden erişilmesini engeller ve sadece form gönderildiğinde verilerin işlenmesini sağlar.
+            }
 ?>

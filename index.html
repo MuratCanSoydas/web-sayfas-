@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!DOCTYPE html> <!-- Tarayıcıya bu dosyanın modern bir HTML5 belgesi olduğunu belirtiriz. -->
+<html lang="tr"> <!-- Sayfanın Türkçe olduğunu belirtiriz. -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kişisel Web Sitem | Hakkında</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Karakter kodlamasını UTF-8 olarak ayarlarız, böylece Türkçe karakterler düzgün görüntülenir. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sayfanın mobil cihazlarda düzgün görünmesi için viewport ayarlarını yaparız. -->
+    <title>Murat Can Soydaş</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS'i CDN üzerinden dahil ederiz, böylece hızlı ve kolay bir şekilde modern bir tasarım elde ederiz. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Font Awesome ikon kütüphanesini dahil ederiz, böylece sosyal medya ikonları gibi görsel öğeler ekleyebiliriz. -->
+    <link rel="stylesheet" href="style.css"> <!-- Kendi özel stil dosyamızı dahil ederiz, böylece sayfanın görünümünü istediğimiz gibi özelleştirebiliriz. -->
 </head>
-<body class="bg-dark text-light">
+<body class="bg-dark text-light"> <!-- Sayfanın arka planını koyu yapar ve metin rengini açık yaparız, böylece kontrast sağlanır ve okunabilirlik artar. -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Murat Can Soydaş</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm"> <!-- Bootstrap navbar'ını kullanarak bir navigasyon çubuğu oluştururuz. "navbar-dark" sınıfı, koyu temaya uygun bir görünüm sağlar. "shadow-sm" sınıfı ise hafif bir gölge efekti ekler. -->
+        <div class="container"> <!-- Navigasyon içeriğini sınırlamak ve ortalamak için Bootstrap container sınıfını kullanırız. -->
+            <a class="navbar-brand" href="index.html">Murat Can Soydaş</a> <!-- Navbar'ın sol tarafında yer alan marka veya logo bağlantısı. Burada adımızı kullanarak ana sayfaya yönlendirme yaparız. -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu"> <!-- Mobil cihazlarda navbar'ın açılır menüye dönüşmesini sağlayan düğme. "data-bs-toggle" ve "data-bs-target" öznitelikleri, Bootstrap'in JavaScript bileşenlerini kullanarak menüyü kontrol eder. -->
+                <span class="navbar-toggler-icon"></span> <!-- Düğmenin içindeki ikon, Bootstrap tarafından sağlanan standart hamburger menü ikonudur. -->
             </button>
-            <div class="collapse navbar-collapse" id="anaMenu">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse" id="anaMenu"> <!-- Navbar'ın açılır menü kısmı. "collapse" sınıfı, menünün başlangıçta gizli olmasını sağlar ve "navbar-collapse" sınıfı, menünün geniş ekranlarda düzgün görünmesini sağlar. "id" özniteliği, düğmenin hangi menüyü kontrol ettiğini belirtir. -->
+                <ul class="navbar-nav ms-auto"> <!-- Navigasyon bağlantılarını içeren liste. "navbar-nav" sınıfı, Bootstrap'in navbar bağlantıları için gerekli olan stilleri sağlar. "ms-auto" sınıfı, bağlantıları sağa hizalamak için kullanılır. -->
                     <li class="nav-item"><a class="nav-link active" href="index.html">Hakkında</a></li>
                     <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li> 
@@ -29,23 +29,24 @@
         </div>
     </nav>
 
-    <main class="container py-5 mt-4">
-        <div class="row align-items-center">
-            <div class="col-md-5 text-center mb-4 mb-md-0">
-                <div class="position-relative d-inline-block">
-                    <img src="resimler/Profil.jpg" alt="Profil Fotoğrafı" 
-                         class="img-fluid rounded-circle border border-warning border-4 shadow-lg" 
+    <main class="container py-5 mt-4"> <!-- Ana içerik alanı. "container" sınıfı, içeriği sınırlamak ve ortalamak için kullanılır. "py-5" sınıfı, üst ve alt boşluk ekler, "mt-4" sınıfı ise üst boşluk ekler. -->
+        <div class="row align-items-center"> <!-- İçeriği satır ve sütunlara bölmek için Bootstrap'ın grid sistemini kullanırız. "align-items-center" sınıfı, içeriği dikey olarak ortalamak için kullanılır. -->
+            <div class="col-md-5 text-center mb-4 mb-md-0"> <!-- Sol sütun, profil fotoğrafını içerecek. "col-md-5" sınıfı, orta ve büyük ekranlarda bu sütunun genişliğini belirler. "text-center" sınıfı, içeriği yatay olarak ortalar. "mb-4" sınıfı, küçük ekranlarda alt boşluk eklerken, "mb-md-0" sınıfı, orta ve büyük ekranlarda alt boşluğu kaldırır. -->
+                <div class="position-relative d-inline-block"> <!-- Profil fotoğrafını içeren div. "position-relative" sınıfı, içindeki öğelerin konumlandırılmasını sağlamak için kullanılır. "d-inline-block" sınıfı, div'in içeriği kadar genişlemesini sağlar. -->
+                    <img src="resimler/Profil.jpg" alt="Profil Fotoğrafı"
+                         class="img-fluid rounded-circle border border-warning border-4 shadow-lg"   
                          style="width: 320px; height: 320px; object-fit: cover; transition: transform 0.3s ease;">
+                         <!-- Profil fotoğrafı. "img-fluid" sınıfı, resmin konteynerine göre boyutlandırılmasını sağlar. "rounded-circle" sınıfı, resmi dairesel yapar. "border border-warning border-4" sınıfları, sarı renkte kalın bir çerçeve ekler. "shadow-lg" sınıfı, büyük bir gölge efekti ekler. "style" özniteliği, resmin genişliğini ve yüksekliğini 320px olarak ayarlar, "object-fit: cover" ile resmi kırpmadan konteyneri doldurmasını sağlar ve "transition" ile hover efektleri için geçiş süresi tanımlar. -->
                 </div>
             </div>
-            <div class="col-md-7">
-                <h1 class="display-4 text-warning mb-3">Merhaba, Ben Murat Can</h1>
-                <p class="lead mb-4">Sakarya Üniversitesi'nde Bilgisayar Mühendisliği 1. sınıf öğrencisiyim. Yazılım geliştirmeye, oyunlara ve tarihe büyük bir ilgi duyuyorum.</p>
+            <div class="col-md-7"> <!-- Sağ sütun, metin içeriğini içerecek. "col-md-7" sınıfı, orta ve büyük ekranlarda bu sütunun genişliğini belirler. -->
+                <h1 class="display-4 text-warning mb-3">Merhaba, Ben Murat Can</h1> <!-- Başlık. "display-4" sınıfı, büyük ve dikkat çekici bir başlık stili sağlar. "text-warning" sınıfı, başlık metnini sarı yapar. "mb-3" sınıfı, başlığın altına boşluk ekler. -->
+                <p class="lead mb-4">Sakarya Üniversitesi'nde Bilgisayar Mühendisliği 1. sınıf öğrencisiyim. Yazılım geliştirmeye, oyunlara ve tarihe büyük bir ilgi duyuyorum.</p> <!-- Giriş paragrafı. "lead" sınıfı, metni daha büyük ve vurgulu yapar. "mb-4" sınıfı, paragrafın altına boşluk ekler. -->
                 
-                <div class="card p-4 bg-transparent border-secondary">
+                <div class="card p-4 bg-transparent border-secondary"> <!-- İlgi alanlarını içeren kart. "card" sınıfı, Bootstrap'in kart bileşenini kullanır. "p-4" sınıfı, kartın içindeki öğeler arasında boşluk ekler. "bg-transparent" sınıfı, kartın arka planını şeffaf yapar. "border-secondary" sınıfı, kartın kenarlığını gri yapar. -->
                     <p class="card-text">C++ ve C# gibi dillerle çalışmayı seviyor, aynı zamanda web teknolojileri üzerinde kendimi geliştiriyorum. Hobilerim arasında Mount & Blade ve Valheim gibi strateji/hayatta kalma oyunları oynamak, 20. yüzyıl Avrupa tarihi okumaları yapmak ve otomobil mekaniklerini araştırmak var.</p>
                     
-                    <div class="mt-3">
+                    <div class="mt-3"> <!-- İlgi alanlarını etiketler şeklinde göstermek için bir bölüm. "mt-3" sınıfı, üstüne boşluk ekler. -->
                         <span class="badge bg-warning text-dark me-2">Pozitif</span>
                         <span class="badge bg-warning text-dark me-2">Öğrenmeyi Seven</span>
                         <span class="badge bg-warning text-dark me-2">Yenilikçi</span>
@@ -56,9 +57,9 @@
         </div>
     </main>
 
-        <section class="container mb-5 text-center">
-        <h3 class="text-warning mb-4 border-bottom border-secondary pb-2 d-inline-block">Bağlantılarım</h3>
-        <div class="d-flex justify-content-center gap-4 mt-3">
+        <section class="container mb-5 text-center"> <!-- Bağlantılar bölümü. "container" sınıfı, içeriği sınırlamak ve ortalamak için kullanılır. "mb-5" sınıfı, alt boşluk ekler. "text-center" sınıfı, içeriği yatay olarak ortalar. -->
+        <h3 class="text-warning mb-4 border-bottom border-secondary pb-2 d-inline-block">Bağlantılarım</h3> <!-- Bölüm başlığı. "text-warning" sınıfı, başlık metnini sarı yapar. "mb-4" sınıfı, başlığın altına boşluk ekler. "border-bottom border-secondary pb-2" sınıfları, başlığın altına gri bir çizgi ekler ve çizgi ile metin arasında boşluk sağlar. "d-inline-block" sınıfı, başlığın genişliğini içeriği kadar yapar, böylece alt çizgi sadece metnin altında görünür. -->
+        <div class="d-flex justify-content-center gap-4 mt-3"> <!-- Sosyal medya ikonlarını içeren bölüm. "d-flex" sınıfı, içeriği esnek kutu düzenine çevirir. "justify-content-center" sınıfı, içeriği yatay olarak ortalar. "gap-4" sınıfı, ikonlar arasında boşluk ekler. "mt-3" sınıfı, üstüne boşluk ekler. -->
             <a href="mailto:muratcansoydas6929@gmail.com" class="social-icon" target="_blank" title="E-posta Gönder">
                 <i class="fa-solid fa-envelope"></i>
             </a>
@@ -75,9 +76,9 @@
     </section>
 
     <footer class="text-center py-4 mt-5">
-        <p class="mb-0 text-muted">&copy; 2026 Murat Can Soydaş - Sakarya Üniversitesi</p>
+        <p class="mb-0 text-muted" style="color: #EBB014 !important;">&copy; 2026 Murat Can Soydaş - Sakarya Üniversitesi</p> <!-- Telif hakkı bilgisi. "mb-0" sınıfı, paragrafın altına boşluk eklememek için kullanılır. "text-muted" sınıfı, metni daha az belirgin yapar. -->
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap'in JavaScript bileşenlerini kullanmak için gerekli olan JS dosyasını CDN üzerinden dahil ederiz. "bootstrap.bundle.min.js" dosyası, Bootstrap'in tüm JS bileşenlerini ve bağımlılıklarını içerir. -->
 </body>
 </html>

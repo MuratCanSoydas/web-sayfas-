@@ -10,14 +10,14 @@
 </head>
 <body class="bg-dark text-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Murat Can Soydaş</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm"> <!-- Bootstrap navbar'ını kullanarak bir navigasyon çubuğu oluştururuz. "navbar-dark" sınıfı, koyu temaya uygun bir görünüm sağlar. "shadow-sm" sınıfı ise hafif bir gölge efekti ekler. -->
+        <div class="container"> <!-- Navigasyon içeriğini sınırlamak ve ortalamak için Bootstrap container sınıfını kullanırız. -->
+            <a class="navbar-brand" href="index.html">Murat Can Soydaş</a> <!-- Navbar'ın sol tarafında yer alan marka veya logo bağlantısı. Burada adımızı kullanarak ana sayfaya yönlendirme yaparız. -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu"> <!-- Mobil cihazlarda navbar'ın açılır menüye dönüşmesini sağlayan düğme. "data-bs-toggle" ve "data-bs-target" öznitelikleri, Bootstrap'in JavaScript bileşenlerini kullanarak menüyü kontrol eder. -->
+                <span class="navbar-toggler-icon"></span> <!-- Düğmenin içindeki ikon, Bootstrap tarafından sağlanan standart hamburger menü ikonudur. -->
             </button>
-            <div class="collapse navbar-collapse" id="anaMenu">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse" id="anaMenu"> <!-- Navbar'ın açılır menü kısmı. "collapse" sınıfı, menünün başlangıçta gizli olmasını sağlar ve "navbar-collapse" sınıfı, menünün geniş ekranlarda düzgün görünmesini sağlar. "id" özniteliği, düğmenin hangi menüyü kontrol ettiğini belirtir. -->
+                <ul class="navbar-nav ms-auto"> <!-- Navigasyon bağlantılarını içeren liste. "navbar-nav" sınıfı, Bootstrap'in navbar bağlantıları için gerekli olan stilleri sağlar. "ms-auto" sınıfı, bağlantıları sağa hizalamak için kullanılır. -->
                     <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
                     <li class="nav-item"><a class="nav-link active" href="cv.html">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
@@ -29,67 +29,67 @@
         </div>
     </nav>
 
-    <header class="text-center py-5 mt-3 border-bottom border-secondary">
+    <header class="text-center py-5 mt-3 border-bottom border-secondary"> <!-- Sayfanın başlık bölümünü oluştururuz. "text-center" sınıfı, içeriği yatay olarak ortalar. "py-5" sınıfı, üst ve alt boşluk ekler, "mt-3" sınıfı ise üst boşluk ekler. "border-bottom border-secondary" sınıfları, başlığın altına gri bir çizgi ekler. -->
         <div class="container">
-            <h1 class="display-4 text-warning"><i class="fa-solid fa-user-graduate me-3"></i>Özgeçmiş</h1>
-            <p class="lead text-muted" style="color: #f8fafc !important;">Akademik Eğitim ve Teknik Yetenek Portfolyosu</p>
+            <h1 class="display-4 text-warning"><i class="fa-solid fa-user-graduate me-3"></i>Özgeçmiş</h1> <!-- Başlık. "display-4" sınıfı, büyük ve dikkat çekici bir başlık stili sağlar. "text-warning" sınıfı, başlık metnini sarı yapar. "fa-solid fa-user-graduate me-3" sınıfları, Font Awesome'dan mezun ikonunu ekler ve "me-3" sınıfı, ikon ile metin arasında boşluk sağlar. -->     
+            <p class="lead text-muted" style="color: #f8fafc !important;">Akademik Eğitim ve Teknik Yetenek Portfolyosu</p> <!-- Alt başlık. "lead" sınıfı, metni daha büyük ve vurgulu yapar. "text-muted" sınıfı, metni daha az belirgin yapar. "style" özniteliği, metin rengini açık bir gri yaparak koyu arka planda daha iyi görünmesini sağlar. -->
         </div>
     </header>
 
-    <main class="container py-5 mt-4">
-        <div class="text-center mb-5">
-            <h1 class="display-4 text-warning fw-bold">ÖZGEÇMİŞ</h1>
-            <div class="header-line"></div>
+    <main class="container py-5 mt-4"> <!-- Ana içerik alanı. "container" sınıfı, içeriği sınırlamak ve ortalamak için kullanılır. "py-5" sınıfı, üst ve alt boşluk ekler, "mt-4" sınıfı ise üst boşluk ekler. -->
+        <div class="text-center mb-5"> <!-- Bölüm başlığı. "text-center" sınıfı, içeriği yatay olarak ortalar. "mb-5" sınıfı, alt boşluk ekler. -->
+            <h1 class="display-4 text-warning fw-bold">PORTFOLYO</h1> <!-- Başlık. "display-4" sınıfı, büyük ve dikkat çekici bir başlık stili sağlar. "text-warning" sınıfı, başlık metnini sarı yapar. "fw-bold" sınıfı, başlık metnini kalın yapar. -->
+            <div class="header-line"></div> <!-- Başlığın altına ince bir çizgi eklemek için özel bir div. "header-line" sınıfı, bu çizgiye özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa genişlik, yükseklik ve renk gibi özellikler tanımlanarak başlığın altına görsel bir ayrım eklenir. -->
         </div>
 
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="cv-tile">
-                    <div class="tile-header">
-                        <i class="fa-solid fa-graduation-cap"></i>
+        <div class="row g-4"> <!-- İçeriği satır ve sütunlara bölmek için Bootstrap'ın grid sistemini kullanırız. "row" sınıfı, bir satır oluşturur. "g-4" sınıfı, sütunlar arasında boşluk ekler. -->
+            <div class="col-md-6"> <!-- Birinci sütun. "col-md-6" sınıfı, orta ve büyük ekranlarda 6 sütun genişliğinde bir alan oluşturur. -->
+                <div class="cv-tile"> <!-- CV bölümlerini içeren kart benzeri bir yapı. "cv-tile" sınıfı, bu bölümlere özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa arka plan rengi, kenarlık, iç boşluk gibi özellikler tanımlanarak her bölümün görsel olarak ayrılması sağlanır. -->
+                <div class="tile-header"> <!-- Her bölümün başlığını içeren kısım. "tile-header" sınıfı, başlık kısmına özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa arka plan rengi, yazı tipi boyutu, renk gibi özellikler tanımlanarak başlıkların görsel olarak vurgulanması sağlanır. -->
+                        <i class="fa-solid fa-graduation-cap"></i> <!-- Font Awesome'dan mezun ikonunu ekler. "fa-solid fa-graduation-cap" sınıfları, bu ikonu belirtir. -->
                         <h3>EĞİTİM</h3>
                     </div>
-                    <ul class="cv-list">
+                    <ul class="cv-list"> 
                         <li><strong>Sakarya Üniversitesi</strong><br><span>Bilgisayar Mühendisliği (Lisans) / 2025-günümüz</span></li>
                         <li><strong>Gümüşhane Fen Lisesi</strong><br><span>Sayısal Bölümü Mezunu / 2024</span></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="cv-tile">
-                    <div class="tile-header">
-                        <i class="fa-solid fa-code"></i>
+            <div class="col-md-6"> <!-- İkinci sütun. "col-md-6" sınıfı, orta ve büyük ekranlarda 6 sütun genişliğinde bir alan oluşturur. -->
+                <div class="cv-tile"> <!-- CV bölümlerini içeren kart benzeri bir yapı. "cv-tile" sınıfı, bu bölümlere özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa arka plan rengi, kenarlık, iç boşluk gibi özellikler tanımlanarak her bölümün görsel olarak ayrılması sağlanır. -->
+                    <div class="tile-header"> <!-- Her bölümün başlığını içeren kısım. "tile-header" sınıfı, başlık kısmına özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa arka plan rengi, yazı tipi boyutu, renk gibi özellikler tanımlanarak başlıkların görsel olarak vurgulanması sağlanır. -->
+                        <i class="fa-solid fa-code"></i> <!-- Font Awesome'dan kod ikonunu ekler. "fa-solid fa-code" sınıfları, bu ikonu belirtir. -->
                         <h3>TEKNİK BECERİLER</h3>
                     </div>
-                    <ul class="cv-list">
-                        <li><strong>Programlama:</strong> <span>C++, C#, Java, Python</span></li>
+                    <ul class="cv-list"> <!-- Teknik becerileri listelemek için bir liste oluştururuz. "cv-list" sınıfı, bu listeye özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa yazı tipi boyutu, renk, boşluk gibi özellikler tanımlanarak liste öğelerinin görsel olarak düzenlenmesi sağlanır. -->
+                        <li><strong>Programlama:</strong> <span>C++, C# </span></li>
                         <li><strong>Web:</strong> <span>HTML5, CSS3, JavaScript, Vue.js</span></li>
                         <li><strong>Araçlar:</strong> <span>Git, GitHub, VS Code, WampServer</span></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="cv-tile">
-                    <div class="tile-header">
-                        <i class="fa-solid fa-certificate"></i>
+            <div class="col-md-6"> <!-- Üçüncü sütun. "col-md-6" sınıfı, orta ve büyük ekranlarda 6 sütun genişliğinde bir alan oluşturur. -->
+                <div class="cv-tile"> <!-- CV bölümlerini içeren kart benzeri bir yapı. "cv-tile" sınıfı, bu bölümlere özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa arka plan rengi, kenarlık, iç boşluk gibi özellikler tanımlanarak her bölümün görsel olarak ayrılması sağlanır. -->
+                    <div class="tile-header"> <!-- Her bölümün başlığını içeren kısım. "tile-header" sınıfı, başlık kısmına özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa arka plan rengi, yazı tipi boyutu, renk gibi özellikler tanımlanarak başlıkların görsel olarak vurgulanması sağlanır. -->
+                        <i class="fa-solid fa-certificate"></i> <!-- Font Awesome'dan sertifika ikonunu ekler. "fa-solid fa-certificate" sınıfları, bu ikonu belirtir. -->
                         <h3>SEMİNERLER</h3>
                     </div>
-                    <ul class="cv-list">
+                    <ul class="cv-list"> <!-- Seminerleri listelemek için bir liste oluştururuz. "cv-list" sınıfı, bu listeye özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa yazı tipi boyutu, renk, boşluk gibi özellikler tanımlanarak liste öğelerinin görsel olarak düzenlenmesi sağlanır. -->
                         <li><strong>Girişimcilik ve Vizyonerlik</strong><br><span>G3 GİRİŞİMCİLİK ZİRVESİ</span></li>
                         <li><strong>Konektivite</strong><br><span>VİZYONER25</span></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="cv-tile">
-                    <div class="tile-header">
-                        <i class="fa-solid fa-diagram-project"></i>
+            <div class="col-md-6"> <!-- Dördüncü sütun. "col-md-6" sınıfı, orta ve büyük ekranlarda 6 sütun genişliğinde bir alan oluşturur. -->
+                <div class="cv-tile"> <!-- CV bölümlerini içeren kart benzeri bir yapı. "cv-tile" sınıfı, bu bölümlere özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa arka plan rengi, kenarlık, iç boşluk gibi özellikler tanımlanarak her bölümün görsel olarak ayrılması sağlanır. -->
+                    <div class="tile-header"> <!-- Her bölümün başlığını içeren kısım. "tile-header" sınıfı, başlık kısmına özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa arka plan rengi, yazı tipi boyutu, renk gibi özellikler tanımlanarak başlıkların görsel olarak vurgulanması sağlanır. -->
+                        <i class="fa-solid fa-diagram-project"></i> <!-- Font Awesome'dan proje diyagramı ikonunu ekler. "fa-solid fa-diagram-project" sınıfları, bu ikonu belirtir. -->
                         <h3>PROJELER</h3>
                     </div>
-                    <ul class="cv-list">
+                    <ul class="cv-list"> <!-- Projeleri listelemek için bir liste oluştururuz. "cv-list" sınıfı, bu listeye özel stiller uygulamak için kullanılır. CSS dosyasında bu sınıfa yazı tipi boyutu, renk, boşluk gibi özellikler tanımlanarak liste öğelerinin görsel olarak düzenlenmesi sağlanır. -->
                         <li><strong>C# otomasyon:</strong> <span>C# arayüzü kullanılarak market otomasyonu geliştirme - Devam Ediyor</span></li>
                         <li><strong>İş Güvenliği Sistemi:</strong> <span>İş Güvenliği Genel Kontrol Ve uyarı Sistemi (MİLTEK Topluluğu) - Devam Ediyor</span></li>
                     </ul>
@@ -99,9 +99,9 @@
     </main>
     </main>
 
-    <footer class="text-center py-4 mt-2 border-top border-secondary">
-        <p class="mb-0 text-muted">&copy; 2026 Murat Can Soydaş - Sakarya Üniversitesi</p>
-    </footer>
+    <footer class="text-center py-4 mt-2 border-top border-secondary"> <!-- Sayfanın alt bilgi bölümünü oluştururuz. "text-center" sınıfı, içeriği yatay olarak ortalar. "py-4" sınıfı, üst ve alt boşluk ekler, "mt-2" sınıfı ise üst boşluk ekler. "border-top border-secondary" sınıfları, alt bilgi bölümünün üstüne gri bir çizgi ekler. -->
+        <p class="mb-0 text-muted" style="color: #EBB014 !important;">&copy; 2026 Murat Can Soydaş - Sakarya Üniversitesi</p> <!-- Telif hakkı bilgisi. "mb-0" sınıfı, paragrafın altına boşluk eklememek için kullanılır. "text-muted" sınıfı, metni daha az belirgin yapar. -->
+    </footer> 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
